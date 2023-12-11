@@ -17,6 +17,11 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/DocumentUpload/CustomeModalTitle"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/components/DocumentUpload/CustomeModalTitle"
+  ],
   "exclude": ["node_modules"]
 }

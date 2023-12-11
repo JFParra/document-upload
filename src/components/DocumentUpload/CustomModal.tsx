@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 import {
   Modal,
   ModalBody,
@@ -9,11 +9,11 @@ import {
   Stack,
   Text,
   useTheme,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
-import CustomModalHeader from './CustomModalHeader';
-import ColumnRowStack from './ColumnRowStack';
-import CustomButton from './CustomButton';
+import CustomModalHeader from "./CustomModalHeader";
+import ColumnRowStack from "./ColumnRowStack";
+import CustomButton from "./CustomButton";
 
 interface CustomModalProps {
   isOpen: boolean;
@@ -22,7 +22,6 @@ interface CustomModalProps {
 
 const CustomModal: FC<CustomModalProps> = ({ isOpen, onClose }) => {
   const theme = useTheme();
-
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} isCentered size="6xl">
@@ -40,16 +39,21 @@ const CustomModal: FC<CustomModalProps> = ({ isOpen, onClose }) => {
         <ModalFooter justifyContent="center">
           <Stack direction="column" alignItems="center">
             <Text fontSize="xl" fontWeight="bold" color="#003b71" mb={4}>
-              Data in the import file is correct. Please press Continue to import.
+              Data in the import file is correct. Please press Continue to
+              import.
             </Text>
             <Stack direction="row" alignItems="center">
-              <CustomButton m={4} variant="primary" >Continue Import</CustomButton>
-              <CustomButton variant="cancel" m={4} onClick={onClose} >Cancel</CustomButton>
+              <CustomButton m={4} variant="primary">
+                Continue Import
+              </CustomButton>
+              <CustomButton variant="cancel" m={4} onClick={onClose}>
+                Cancel
+              </CustomButton>
             </Stack>
           </Stack>
         </ModalFooter>
       </ModalContent>
-    </Modal >
+    </Modal>
   );
 };
 
